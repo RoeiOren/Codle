@@ -15259,6 +15259,127 @@ const dictionary = [
     "zymic"
 ];
 
+const codeWords = [
+    "scale",
+    "merge",
+    "clone",
+    "token",
+    "class",
+    "ascii",
+    "loops",
+    "while",
+    "linux",
+    "micro",
+    "state",
+    "local",
+    "field",
+    "types",
+    "const",
+    "array",
+    "axios",
+    "front",
+    "model",
+    "regex",
+    "alert",
+    "block",
+    "debug",
+    "equal",
+    "error",
+    "event",
+    "false",
+    "value",
+    "tuple",
+    "stack",
+    "stdin",
+    "parse",
+    "print",
+    "react",
+    "shift",
+    "label",
+    "babel",
+    "mouse",
+    "paper",
+    "mongo",
+    "mysql",
+    "nosql",
+    "redis",
+    "minio",
+    "space",
+    "check",
+    "exist",
+    "scrum",
+    "agile",
+    "macos",
+    "slack",
+    "async",
+    "image",
+    "build",
+    "queue",
+    "shell",
+    "route",
+    "pixel",
+    "swipe",
+    "basic",
+    "timer",
+    "video",
+    "share",
+    "intel",
+    "graph",
+    "fetch",
+    "login",
+    "store",
+    "close",
+    "batch",
+    "apple",
+    "click",
+    "digit",
+    "input",
+    "paste",
+    "write",
+    "start",
+    "email",
+    "proxy",
+    "setup",
+    "allow",
+    "await",
+    "break",
+    "algol",
+    "frame",
+    "query",
+    "title",
+    "param",
+    "excel",
+    "kafka",
+    "vuejs",
+    "slice",
+    "drive",
+    "azure",
+    "patch",
+    "audit",
+    "crash",
+    "figma",
+    "table",
+    "bytes",
+    "logic",
+    "level",
+    "octal",
+    "cache",
+    "flash",
+    "adobe",
+    "sdwan",
+    "codec",
+    "tcpip",
+    "index",
+    "mount",
+    "virus",
+    "unzip",
+    "xhtml",
+    "cloud",
+    "agent",
+    "alias",
+    "align",
+]
+
 const WORD_LEGTH = 5;
 const FLIP_ANIMATION_DURATION = 500;
 const DANCE_ANIMATION_DURATION = 500;
@@ -15267,7 +15388,8 @@ const keyboard = document.querySelector('[data-keyboard]')
 const guessGrid = document.querySelector('[data-guess-grid]')
 const alertContainer = document.querySelector('[data-alert-container]')
 
-const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)];
+// const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)];
+const targetWord = codeWords[Math.floor(Math.random() * codeWords.length)];
 
 startInteraction();
 
@@ -15336,14 +15458,14 @@ function deleteKey() {
 function submitGuess() {
     const activeTiles = [...getActiveTiles()];
     if (activeTiles.length !== WORD_LEGTH) {
-        showAlert('Not enough tiles');
+        showAlert('Not enough letters');
         shakeTiles(activeTiles);
         return;
     }
 
     const guess = activeTiles.reduce((word, tile) => word + tile.dataset.letter, "")
 
-    if (!dictionary.includes(guess)) {
+    if (!codeWords.includes(guess)) {
         showAlert('Not in word list');
         shakeTiles(activeTiles);
         return;
