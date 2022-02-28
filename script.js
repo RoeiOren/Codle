@@ -28,6 +28,7 @@ function handleMouseClick(e) {
   }
 
   if (e.target.matches('[data-enter]')) {
+    dsa
     submitGuess();
     return;
   }

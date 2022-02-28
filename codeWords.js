@@ -1,4 +1,6 @@
 const words = [
+    'lorem',
+    'ipsum',
     'music',
     'point',
     'audio',

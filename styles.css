@@ -43,11 +43,11 @@ header .title {
 .keyboard {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1em));
-  grid-auto-rows: 3em;
+  grid-auto-rows: 3.5em;
   gap: 0.3em;
   justify-content: center;
 }
-
+  
 .key {
   font-size: 0.75em;
   grid-column: span 2;
