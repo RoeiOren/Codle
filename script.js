@@ -13127,6 +13127,8 @@ function handleKeyPress(e) {
     pressKey(e.key);
     return;
   }
+
+  showAlert('Invalid letter/key');
 }
 
 function pressKey(key) {
