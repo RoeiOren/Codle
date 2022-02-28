@@ -7,10 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>WordleLike</title>
+    <title>Codle</title>
 </head>
-
 <body>
+    <header>
+        <div class="menu-left">
+            <button id="nav-button" class="icon" aria-label="Navigation menu. Click for links to other NYT Games and our Privacy Policy." tabindex="-1">
+              <nav-icon></nav-icon>
+            </button>
+            <button id="help-button" class="icon" aria-label="Help" tabindex="-1">
+              <game-icon icon="help"></game-icon>
+            </button>
+          </div>
+        <div class="title">
+            Codle
+        </div>
+        <div class="menu-right">
+            <button id="statistics-button" class="icon" aria-label="Statistics" tabindex="-1">
+              <game-icon icon="statistics"></game-icon>
+            </button>
+            <button id="settings-button" class="icon" aria-label="Settings" tabindex="-1">
+              <game-icon icon="settings"></game-icon>
+            </button>
+          </div>
+        </header>
+    <br/>
     <div class="alert-container" data-alert-container>
     </div>
     <div data-guess-grid class="guess-grid">

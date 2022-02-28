@@ -2,7 +2,7 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
@@ -12,19 +12,44 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 1em;
-  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
+  font-size: clamp(0.5rem, 2.1vmin, 1.5rem);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  height: var(--header-height);
+  color: var(--color-tone-1);
+  border-bottom: 1px solid var(--color-tone-4);
+}
+
+header .title {
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  color: white;
 }
 
 .keyboard {
   display: grid;
-  grid-template-columns: repeat(20, minmax(auto, 1.25em));
+  grid-template-columns: repeat(20, minmax(auto, 1em));
   grid-auto-rows: 3em;
-  gap: 0.25em;
+  gap: 0.3em;
   justify-content: center;
 }
 
 .key {
-  font-size: inherit;
+  font-size: 0.75em;
   grid-column: span 2;
   border: none;
   padding: 0;
@@ -35,9 +60,10 @@ body {
   color: white;
   fill: white;
   text-transform: uppercase;
-  border-radius: 0.25em;
+  border-radius: 0.3em;
   cursor: pointer;
   user-select: none;
+  font-weight: bold;
 }
 
 .key.large {
@@ -45,8 +71,8 @@ body {
 }
 
 .key > svg {
-  width: 1.75em;
-  height: 1.75em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .key:hover,
@@ -74,16 +100,16 @@ body {
   justify-content: center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(5, 4em);
-  grid-template-rows: repeat(6, 4em);
-  gap: 0.25em;
+  grid-template-columns: repeat(5, 3.5em);
+  grid-template-rows: repeat(6, 3.5em);
+  gap: 0.35em;
   margin-bottom: 1em;
 }
 
 .tile {
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
-  border: 0.05em solid hsl(240, 2%, 23%);
+  border: 0.07em solid hsl(240, 2%, 23%);
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
