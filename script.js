@@ -103,6 +103,8 @@ function flipTile(tile, index, array, guess) {
     tile.classList.add('flip');
   }, (index * FLIP_ANIMATION_DURATION) / 2);
 
+
+  // TODO: fix multiple letters (cases: virus - class, label - allow)
   tile.addEventListener(
     'transitionend',
     () => {
@@ -113,7 +115,7 @@ function flipTile(tile, index, array, guess) {
         key.classList.add('correct');
       } /* Show the correct number of time - No extra and not less */ else if (
         targetWord.includes(letter) &&
-        (countLetterInWord(guess, letter) <= countLetterInWord(targetWord, letter) || index === guess.indexOf(letter))
+        (countLetterInWord(guess, letter) <= countLetterInWord(targetWord, letter) || (index === guess.indexOf(letter) && index === guess.lastIndexOf(letter)))
       ) {
         tile.dataset.state = 'wrong-location';
         key.classList.add('wrong-location');
